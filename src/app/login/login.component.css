@@ -1,0 +1,33 @@
+.box{
+    height: 450px;
+    background-color: black;
+    padding:10px;
+    margin-top: 100px;
+    width: 300px;
+}
+h3{
+    color: white;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    text-align: center;
+}
+p{
+    color: white;
+    margin-left: 10%;
+}.btn{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 10%;
+    margin-left: 30%;
+}
+a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+.form-control{
+  margin-top: 2%;
+}
+.errors{
+    color: red;
+}

@@ -1,0 +1,30 @@
+<div class="row">
+
+    <div class="col-lg-5 col-md-3 col-12"></div>
+
+    <div class="col-lg-6 col-md-6 col-12 box">
+        <h3>Register</h3>
+
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+            <input type="text" id="unametext" class="form-control" name="unametext" formControlName="uname"
+                placeholder="Username"><br>
+            <div *ngIf="(this.registerForm.get('uname')?.touched ||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors"
+                class="errors">Invalid Username</div>
+            <input type="text" id="renotext" class="form-control" name="renotext" formControlName="reno"
+                placeholder="register number"><br>
+            <div *ngIf="(this.registerForm.get('reno')?.touched ||this.registerForm.get('reno')?.dirty)&&this.registerForm.get('reno')?.errors"
+                class="errors">Invalid Register Number</div>
+            <input type="text" id="pswdtext" class="form-control" name="pswdtext" formControlName="pswd"
+                placeholder="password">
+            <div *ngIf="(this.registerForm.get('pswd')?.touched ||this.registerForm.get('pswd')?.dirty)&&this.registerForm.get('pswd')?.errors"
+                class="errors">Incorrect Password</div>
+            <button type="submit" class="btn btn-dark">register</button>
+        </form>
+        <p>have an account?<a routerLink="">log in</a></p>
+    </div>
+
+    <div class="col-lg-1 col-md-3 col-12">
+
+    </div>
+</div>

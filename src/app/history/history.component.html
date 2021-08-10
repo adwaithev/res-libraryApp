@@ -1,0 +1,23 @@
+<div class="container">
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>BOOK SL NO</th>
+            <th>NUMBER OF BOOKS</th>
+            <th>ACTIVITY</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let hist of history">
+            <td>{{hist.slno}}</td>
+            <td>{{hist.bno}}</td>
+            <td>{{hist.act}}</td>
+        </tr>
+    </tbody>
+</table>
+<a routerLink="/dashboard">Home</a>
+
+
+
+</div>

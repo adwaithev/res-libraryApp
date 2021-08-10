@@ -1,0 +1,45 @@
+<div class="row">
+    <a routerLink="/history">VIEW YOUR ACTIVITY</a>
+
+    <div class="col-lg-6 col-md-6 col-12 box" >
+        <h3>Add a Book</h3>
+
+        <form [formGroup]="addForm" (ngSubmit)="add()">
+            <input type="text" id="reno" name="reno" class="form-control" formControlName="reno1" placeholder="Register number"><br>
+            <div *ngIf="(this.addForm.get('reno1')?.touched ||this.addForm.get('reno1')?.dirty)&&this.addForm.get('reno1')?.errors"class="errors">Invalid Register Number</div>
+            <input type="text" id="pswd" name="pswd" class="form-control" formControlName="pswd1" placeholder="Password"><br>
+            <div *ngIf="(this.addForm.get('pswd1')?.touched ||this.addForm.get('pswd1')?.dirty)&&this.addForm.get('pswd1')?.errors"class="errors">Invalid Register Number</div>
+            <input type="text" id="slno" name="bname" class="form-control" formControlName="slno1" placeholder="Book sl no"><br>
+            <div *ngIf="(this.addForm.get('slno1')?.touched ||this.addForm.get('slno1')?.dirty)&&this.addForm.get('slno1')?.errors"class="errors">Invalid Register Number</div> 
+            <input type="text" id="no" name="no" class="form-control" formControlName="bno1" placeholder="No of books">  
+            <div *ngIf="(this.addForm.get('bno1')?.touched ||this.addForm.get('bno1')?.dirty)&&this.addForm.get('bno1')?.errors"class="errors">Invalid Register Number</div>
+            <button type="submit" value="Add" class="btn btn-dark">Add</button>
+        </form>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-12 box">
+        <h3>Take a Book</h3>
+
+        <form [formGroup]="borrowForm" (ngSubmit)="borrow()">
+            <input type="text" id="reno" name="reno" class="form-control" formControlName="reno" placeholder="Register number"><br>
+            <div *ngIf="(this.borrowForm.get('reno')?.touched ||this.borrowForm.get('reno')?.dirty)&&this.borrowForm.get('reno')?.errors"class="errors">Invalid Register Number</div>
+            <input type="text" id="pswd" name="pswd" class="form-control"  formControlName="pswd" placeholder="Password"><br>
+            <div *ngIf="(this.borrowForm.get('pswd')?.touched ||this.borrowForm.get('pswd')?.dirty)&&this.borrowForm.get('pswd')?.errors"class="errors">Invalid Password</div>
+            <input type="text" id="slno" name="slno" class="form-control" formControlName="slno" placeholder="Book sl no"><br>
+            <div *ngIf="(this.borrowForm.get('slno')?.touched ||this.borrowForm.get('slno')?.dirty)&&this.borrowForm.get('slno')?.errors"class="errors">Invalid Serial Number</div>
+            <input type="text" id="no" name="no" class="form-control"  formControlName="bno" placeholder="No of books">
+            <div *ngIf="(this.borrowForm.get('bno')?.touched ||this.borrowForm.get('bno')?.dirty)&&this.borrowForm.get('bno')?.errors"class="errors">Invalid Serial Number</div>
+            <button type="submit" value="borrow" class="btn btn-dark">Take</button>
+        </form>
+        
+    </div>
+
+
+
+
+
+
+  
+
+
+</div>
